@@ -1,15 +1,32 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import image from "../../public/imagi.png";
+import { useRouter } from "next/navigation";
 
 function Student() {
+  const router = useRouter();
   return (
     <div className="flex min-h-screen space-x-10">
       <div className="w-1/4 bg-[#B4D4FF]">
-        <div className="flex flex-col justify-around h-screen">
-          <div className="text-sm">Favourite collection</div>
-          <div className="text-sm">favourite collection</div>
+        <div className="flex flex-col fixed top-40 space-y-4 p-4 h-screen">
+          <button
+            className="text-sm"
+            onClick={() => {
+              router.push("/student/browse");
+            }}
+          >
+            browse collection
+          </button>
+          <button
+            className="text-sm"
+            onClick={() => {
+              router.push("/student/favourite");
+            }}
+          >
+            favourite collection
+          </button>
         </div>
       </div>
       <div className="w-1/4 px-2 bg-[#B4D4FF]">

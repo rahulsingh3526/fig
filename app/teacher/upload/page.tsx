@@ -4,7 +4,7 @@ const Upload = () => {
   return (
     <div className="flex">
       <div className="w-1/4 bg-[#B4D4FF]">
-        <div className="flex flex-col justify-around h-screen">
+        <div className="flex flex-col fixed top-40 space-y-4 p-4 h-screen">
           <div className="text-sm">browse collection</div>
           <div className="text-sm">favourite collection</div>
         </div>
